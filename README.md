@@ -13,11 +13,12 @@ Put a copy of **ojdbc8.jar** and save in **/zeppelin/interpreter/jdbc/ojdbc8.jar
 
 ## Create a new interpreter
 Connect to http://localhos:8080 and from menu:
-<img src="Menu.png" alt="Menu" width="100"/>
+
+<img src="Menu.png" alt="Menu" width="250"/>
 
 push the create button:
 
-<img src="Create.png" alt="Create" width="100"/>
+<img src="Create.png" alt="Create" width="250"/>
 
 and chooe an **Intepreter Name**, for example **osql** , and jdbc as **Interpreter Group**:
 
