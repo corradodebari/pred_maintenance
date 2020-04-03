@@ -29,11 +29,30 @@ then complete as follow:
 ![Conf](Conf.jpg)
 
 In this case it has been used a "Service" as DB Connection, non a SID.
+To have an interpreter to run multiple SQL statements, create another one, for example: **%script** and check at True the field:
+```
+default.splitQueries
+```
+NOTE: In case of long running script, if you could receive this exception:
 
-In case of long running script, if you receive this exception:
     java.sql.SQLRecoverableException: No more data to read from socket
 	at oracle.jdbc.driver.T4CMAREngineNIO.prepareForUnmarshall(T4CMAREngineNIO.java:782)
 	at oracle.jdbc.driver.T4CMAREngineNIO.unmarshalUB1(T4CMAREngineNIO.java:427)
- 
-
+In this case you can convert the statement in a job, like in this example:
+```
+%osql
+DECLARE
+  X NUMBER;
+begin
+dbms_job.submit(
+    X,
+    'BEGIN test_model(1,25); END;',
+     SYSDATE
+    );
+end;
+```
+and  monitor the end of task with:
+```
+select job_name,job_action,start_date,end_date from USER_SCHEDULER_JOBS
+```
 
