@@ -1,9 +1,9 @@
 # ---------------------------------------------------
 # Script that merges the IMS files in blocks of
-# BATCH number of records and create a last file as 
+# BATCH number of records and create a last file as: 
 #   Mergedataset_FINAL.csv
 # 
-# -------------------------------------------------
+# ---------------------------------------------------
 import glob
 import ntpath
 import pandas as pd 
