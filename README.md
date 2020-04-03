@@ -30,7 +30,10 @@ then complete as follow:
 
 In this case it has been used a "Service" as DB Connection, non a SID.
 
-
-
+In case of long running script, if you receive this exception:
+    java.sql.SQLRecoverableException: No more data to read from socket
+	at oracle.jdbc.driver.T4CMAREngineNIO.prepareForUnmarshall(T4CMAREngineNIO.java:782)
+	at oracle.jdbc.driver.T4CMAREngineNIO.unmarshalUB1(T4CMAREngineNIO.java:427)
+ 
 
 
