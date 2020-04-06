@@ -12,7 +12,7 @@ docker run -d -it -e GRANT_SUDO="yes" --user root -p 8080:8080  -v [YOUR_DIRECTO
 Get a copy of **ojdbc8.jar**, for example from SQLDeveloper, and save it in **/zeppelin/interpreter/jdbc/ojdbc8.jar**
 
 ## Create a new interpreter:
-Connect to http://localhos:8080 and from menu:
+Connect to http://localhost:8080 and from menu:
 
 <img src="Menu.png" alt="Menu" width="250"/>
 
